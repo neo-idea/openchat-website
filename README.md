@@ -14,10 +14,10 @@ Open `index.html` in a browser, or run `python3 -m http.server` in this folder.
 
 ## DNS setup (one time)
 
-The site is served by GitHub Pages. In the DNS panel for `zpad.app`, add:
+The site is served by GitHub Pages from the `neo-idea` organization. In the DNS panel for `zpad.app`, add:
 
 ```
-CNAME  openchat  →  pekaboo.github.io
+CNAME  openchat  →  neo-idea.github.io
 ```
 
-Until that record exists, the site is reachable at https://pekaboo.github.io/openchat-website/
+Until that record exists, the site is reachable at https://neo-idea.github.io/openchat-website/
