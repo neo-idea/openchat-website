@@ -8,76 +8,37 @@
   <link rel="canonical" href="https://openchat.zpad.app/get.html" />
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body { background: var(--bg); color: var(--hero-ink); }
-    .get-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
-    .get-card { text-align: center; max-width: 420px; }
-    .get-icon { width: 56px; height: 56px; border-radius: 15px; margin: 0 auto 22px; box-shadow: 0 0 40px rgba(59, 130, 246, 0.35); }
-    .get-card h1 { font-size: 20px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; }
-    .get-card p { font-size: 14px; color: var(--hero-soft); line-height: 1.6; margin-bottom: 18px; }
-    .get-card a { color: #7fb0f9; text-decoration: none; font-weight: 550; border-bottom: 1px solid rgba(127, 176, 249, 0.4); padding-bottom: 2px; }
-    .get-card a:hover { border-bottom-color: #7fb0f9; }
-    .spin {
-      display: inline-block; width: 14px; height: 14px; border-radius: 50%;
-      border: 2px solid rgba(255, 255, 255, 0.15); border-top-color: #60a5fa;
-      animation: spin 0.8s linear infinite; vertical-align: -2px; margin-right: 8px;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .soon-badge {
-      display: inline-block; margin-top: 8px; padding: 8px 18px; border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.18);
-      font-size: 13.5px; font-weight: 600; color: var(--hero-ink);
-    }
-  </style>
 </head>
 <body>
+  <main class="get-wrap">
+    <div class="get-card">
+      <img src="assets/icon.png" alt="OpenChat icon" class="get-icon">
+      <h1><span class="spin"></span><span id="title">Taking you to the App Store…</span></h1>
+      <p id="subtitle">OpenChat for iPhone and iPad should open momentarily.</p>
+      <noscript><p><a id="nslink" href="download.html">Click here if nothing happens</a></p></noscript>
+      <p style="margin-top:22px;"><a href="download.html">Back to downloads</a></p>
+      <span class="soon-badge">Awaiting App Store availability</span>
+    </div>
+  </main>
 
-<main class="get-wrap">
-  <div class="get-card">
-    <img src="assets/icon.png" alt="OpenChat icon" class="get-icon">
-    <h1><span class="spin"></span><span id="title">Taking you to the App Store…</span></h1>
-    <p id="subtitle">OpenChat for iPhone and iPad should open momentarily.</p>
-    <noscript>
-      <p><a id="nslink" href="download.html">Click here if nothing happens</a></p>
-    </noscript>
-    <p style="margin-top: 22px;"><a href="download.html">← Back to downloads</a></p>
-  </div>
-</main>
+  <script>
+    const APPSTORE_URL = "";
 
-<script>
-  // ─────────────────────────────────────────────────────────────
-  // Single source of truth for the store listing.
-  // Leave empty until the app is live on the App Store, then set
-  // it ONCE (the App Store URL is stable across all versions):
-  //
-  //   const APPSTORE_URL = "https://apps.apple.com/us/app/idXXXXXXXXX";
-  //
-  // Empty → this page shows the "coming soon" state instead of
-  // redirecting.
-  // ─────────────────────────────────────────────────────────────
-  const APPSTORE_URL = "";
+    (function () {
+      const title = document.getElementById("title");
+      const subtitle = document.getElementById("subtitle");
+      const nslink = document.getElementById("nslink");
 
-  (function () {
-    const title = document.getElementById("title");
-    const subtitle = document.getElementById("subtitle");
-    const nslink = document.getElementById("nslink");
-
-    if (APPSTORE_URL) {
-      nslink.href = APPSTORE_URL;
-      // 2s human-readable pause, then off to the store (meta-refresh
-      // fallback for the no-JS case is handled by the redirect below)
-      setTimeout(function () { window.location.href = APPSTORE_URL; }, 1200);
-      // Fallback retry link after 4s if the store still hasn't opened
-      setTimeout(function () {
-        subtitle.innerHTML = 'Nothing happening? <a href="' + APPSTORE_URL + '">Retry</a>';
-      }, 4000);
-    } else {
-      document.querySelector(".spin").style.display = "none";
-      title.textContent = "Almost there — OpenChat is coming to the App Store.";
-      subtitle.innerHTML = 'The app is in final preparation. Meanwhile, see what you\'ll get on the <a href="download.html">download page</a>.';
-    }
-  })();
-</script>
-
+      if (APPSTORE_URL) {
+        nslink.href = APPSTORE_URL;
+        setTimeout(() => window.location.href = APPSTORE_URL, 1200);
+        setTimeout(() => subtitle.innerHTML = 'Nothing happening? <a href="' + APPSTORE_URL + '">Retry</a>', 4000);
+      } else {
+        document.querySelector(".spin").style.display = "none";
+        title.textContent = "OpenChat is almost on the App Store.";
+        subtitle.innerHTML = 'The listing is in final preparation. Meanwhile, see what you\'ll get on the <a href="download.html">download page</a>.';
+      }
+    })();
+  </script>
 </body>
 </html>

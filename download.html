@@ -3,47 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download OpenChat — Get it on the App Store</title>
-  <meta name="description" content="Download OpenChat for iPhone and iPad from the App Store. Free to start with your own API key; OpenChat Pro is an optional one-time unlock.">
+  <title>Download OpenChat — Private AI chat for iPhone and iPad</title>
+  <meta name="description" content="Download OpenChat for iPhone and iPad. Start free with your own provider key; OpenChat Pro is an optional $9.99 lifetime unlock.">
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .dl-card {
-      background: var(--card);
-      border: 1px solid rgba(0, 0, 0, 0.07);
-      border-radius: var(--radius);
-      padding: 36px 28px;
-      display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px;
-      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
-      margin-bottom: 36px;
-    }
-    .dl-btn {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: var(--ink); color: #fff;
-      padding: 15px 34px; border-radius: 14px;
-      font-weight: 700; font-size: 17px; text-decoration: none;
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .dl-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(15, 23, 42, .25); text-decoration: none; }
-    .dl-meta { font-size: 13.5px; color: var(--ink-soft); }
-    .dl-meta strong { color: var(--ink); }
-    .dl-steps { display: grid; gap: 12px; max-width: 640px; margin: 0 auto; }
-    .dl-step {
-      display: flex; gap: 14px; align-items: flex-start;
-      background: #fff; border: 1px solid rgba(0, 0, 0, 0.07); border-radius: 14px; padding: 18px 20px;
-    }
-    .dl-step-n {
-      flex: none; width: 26px; height: 26px; border-radius: 8px;
-      background: #e8f0fe; color: var(--accent-deep);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 13px; font-weight: 700;
-    }
-    .dl-step p { font-size: 15px; color: var(--ink-soft); }
-    .dl-step strong { color: var(--ink); }
-    .dl-note { max-width: 640px; margin: 26px auto 0; font-size: 13.5px; color: var(--ink-soft); text-align: center; }
-    .dl-note a { color: var(--accent-deep); }
-  </style>
 </head>
 <body>
   <header class="nav">
@@ -52,41 +16,44 @@
         <img src="assets/icon.png" alt="OpenChat icon" class="brand-icon">
         <span>OpenChat</span>
       </a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
+      <nav aria-label="Primary">
+        <a href="index.html#workspace">Workspace</a>
+        <a href="index.html#hermes">Hermes</a>
+        <a href="index.html#privacy">Privacy</a>
+        <a class="nav-cta" href="download.html">Download</a>
       </nav>
     </div>
   </header>
 
   <main class="legal">
     <div class="legal-inner">
-      <h1>Download OpenChat</h1>
+      <p class="eyebrow">Download</p>
+      <h1>OpenChat for iPhone and iPad</h1>
       <p class="meta">Free to start · Your keys, your models, your device</p>
 
       <div class="dl-card">
-        <a class="dl-btn" href="get.html">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
+        <a class="button button-primary" href="get.html">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="19" height="19"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M12 4v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
           Download on the App Store
         </a>
-        <p class="dl-meta"><strong>iOS 18.6+</strong> · iPhone &amp; iPad · <strong>Free download</strong>, Pro is a one-time unlock</p>
+        <p class="dl-meta" style="margin-top:15px;"><strong>iOS 18.6+</strong> · iPhone &amp; iPad · <strong>Free download</strong>, Pro is $9.99 once</p>
       </div>
 
       <div class="dl-steps">
-        <div class="dl-step"><span class="dl-step-n">1</span><p><strong>Tap Get</strong> on the App Store page and install OpenChat.</p></div>
-        <div class="dl-step"><span class="dl-step-n">2</span><p><strong>Add a provider</strong> — paste an API key from OpenAI, Anthropic, Google, DeepSeek, GLM, or any OpenAI-compatible endpoint.</p></div>
-        <div class="dl-step"><span class="dl-step-n">3</span><p><strong>Start chatting</strong> with any model, switch anytime, and keep every conversation on your device.</p></div>
+        <div class="dl-step"><span class="dl-step-n">1</span><p><strong>Install OpenChat.</strong> No account is required to get started.</p></div>
+        <div class="dl-step"><span class="dl-step-n">2</span><p><strong>Add your provider.</strong> Paste an API key from OpenAI, Anthropic, Google, DeepSeek, GLM, or a custom OpenAI-compatible endpoint.</p></div>
+        <div class="dl-step"><span class="dl-step-n">3</span><p><strong>Start chatting.</strong> Switch models, dictate hands-free, and keep conversations on device.</p></div>
       </div>
 
-      <p class="dl-note">Coming to the App Store soon — the button above will take you straight to the listing once OpenChat is live. Questions in the meantime? See the <a href="support.html">Support Center</a> or read the <a href="privacy.html">privacy policy</a>.</p>
+      <p class="dl-note">OpenChat is completing App Store release. The button above will open the listing as soon as it is live. Questions? Visit the <a href="support.html">Support Center</a> or read the <a href="privacy.html">privacy policy</a>.</p>
     </div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <span>© 2026 OpenChat · openchat.zpad.app</span>
-      <span><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></span>
+      <a class="brand" href="/"><img src="assets/icon.png" alt="" class="brand-icon"><span>OpenChat</span></a>
+      <nav aria-label="Footer"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="mailto:openchat@zpad.app">openchat@zpad.app</a></nav>
+      <span>© 2026 OpenChat</span>
     </div>
   </footer>
 </body>

@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenChat — Your chat. Every model. One app.</title>
-  <meta name="description" content="OpenChat is a privacy-first AI chat app for iPhone and iPad. Bring your own API key, switch between every major model, and keep your conversations on your device.">
+  <title>OpenChat — Private AI chat for every model</title>
+  <meta name="description" content="OpenChat is a native AI workspace for iPhone and iPad. Bring your own API keys, switch models, keep chats on device, and connect with your Hermes service.">
+  <meta property="og:title" content="OpenChat — Private AI chat for every model">
+  <meta property="og:description" content="Bring your own keys. Switch models. Keep every conversation on your device.">
+  <meta property="og:image" content="/assets/icon.png">
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
   <link rel="stylesheet" href="styles.css">
@@ -16,11 +19,12 @@
         <img src="assets/icon.png" alt="OpenChat icon" class="brand-icon">
         <span>OpenChat</span>
       </a>
-      <nav>
-        <a href="download.html">Download</a>
-        <a href="#features">Features</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
+      <nav aria-label="Primary">
+        <a href="#workspace">Workspace</a>
+        <a href="#hermes">Hermes</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#pro">Pro</a>
+        <a class="nav-cta" href="download.html">Download</a>
       </nav>
     </div>
   </header>
@@ -28,88 +32,163 @@
   <main>
     <section class="hero">
       <div class="hero-inner">
-        <img src="assets/icon.png" alt="OpenChat app icon" class="hero-icon" width="112" height="112">
-        <h1>Your chat.<br><span class="accent">Every model.</span><br>One app.</h1>
-        <p class="sub">OpenChat is a privacy-first AI chat app for iPhone and iPad. Bring your own API key, talk to any model you like, and keep every conversation on your own device.</p>
-        <div class="cta-row">
-          <a class="cta-soon cta-link" href="download.html">Download on the App Store</a>
+        <p class="hero-eyebrow">iPhone &amp; iPad · Free to start</p>
+        <h1>Ask anything.<br><span>Keep everything.</span></h1>
+        <p class="hero-copy">
+          OpenChat is a private, native workspace for AI conversations. Bring your own keys,
+          switch models whenever you like, and keep your chats on your device.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="download.html">Download OpenChat</a>
+          <a class="button button-ghost" href="#workspace">See how it works</a>
         </div>
+
+        <div class="composer" aria-label="OpenChat conversation example">
+          <div class="composer-model">
+            <span class="provider-dot"></span>
+            Claude Opus
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <p>Draft a launch plan for my indie app…</p>
+          <div class="composer-tools">
+            <span class="tool-chip">Attach context</span>
+            <span class="tool-chip">Voice</span>
+            <span class="send-button" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+          </div>
+        </div>
+
         <ul class="hero-points">
-          <li>No subscription required to start</li>
-          <li>Your keys stay in your Keychain</li>
-          <li>Your chats stay on your device</li>
-          <li>Connect with your Hermes service</li>
+          <li>Bring your own key</li>
+          <li>Local-first storage</li>
+          <li>No analytics</li>
+          <li>Hermes-ready</li>
         </ul>
       </div>
     </section>
 
-    <section class="section" id="features">
+    <section class="section" id="workspace">
       <div class="section-inner">
-        <h2>Why OpenChat</h2>
-        <div class="grid">
-          <div class="card">
-            <div class="card-icon">🔑</div>
-            <h3>Bring your own key</h3>
-            <p>Connect OpenAI, Anthropic, Google, DeepSeek, GLM, or any OpenAI-compatible endpoint with your own API key. You pay providers directly for what you use — no markup, no middleman.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">🧭</div>
-            <h3>Your Hermes service</h3>
-            <p>Use OpenChat Pro to connect with the Hermes service on your Mac. Copy the generated start command, run it in Terminal, and keep your tools, memory, and skills on your own machine.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">🔁</div>
-            <h3>Every model, one place</h3>
-            <p>Switch models mid-conversation. Compare answers from different providers side by side and pick the one that works best for the task at hand.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">🛡️</div>
-            <h3>Private by design</h3>
-            <p>Conversations are stored locally on your device. OpenChat has no servers and collects no analytics. Requests go straight from your phone to your chosen provider.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">🎙️</div>
-            <h3>Speak, don't type</h3>
-            <p>Dictate messages by voice with on-device speech recognition, and keep the conversation flowing hands-free when you want to.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">☁️</div>
-            <h3>Your backup, your cloud</h3>
-            <p>Optional iCloud backup keeps a copy of your conversations in your own private iCloud — not on ours, because we don't have one.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">⚡</div>
-            <h3>Fast and focused</h3>
-            <p>Streaming responses, Markdown rendering, conversation search, pinned threads, and a native interface built with SwiftUI that feels right at home on iOS.</p>
-          </div>
+        <div class="section-head">
+          <p class="eyebrow">The workspace</p>
+          <h2>One clean place for every model</h2>
+          <p>Compare providers without exporting chats or managing a dozen browser tabs.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card feature-wide">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7h8M8 12h5M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
+            </div>
+            <h3>Switch models mid-conversation</h3>
+            <p>Move from Claude to GPT, Gemini, DeepSeek, GLM, or any OpenAI-compatible endpoint while keeping the thread intact.</p>
+            <div class="model-row" aria-label="Supported provider types">
+              <span>Claude</span><span>OpenAI</span><span>Gemini</span><span>DeepSeek</span><span>GLM</span><span>Custom</span>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 7a4 4 0 10-3.9 5L7 17v0h4v-3h3v-2.2A4 4 0 0115 7z"/></svg>
+            </div>
+            <h3>Your keys, your account</h3>
+            <p>API credentials stay in the iOS Keychain. Requests go directly to the provider you choose—without an OpenChat relay.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 4v5c0 4.4-2.9 7.9-7 9-4.1-1.1-7-4.6-7-9V7l7-4z"/></svg>
+            </div>
+            <h3>Private by default</h3>
+            <p>Chats live on device. Optional backup uses your own iCloud. No accounts, no tracking SDKs, no telemetry.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+            </div>
+            <h3>Native and fast</h3>
+            <p>Streaming replies, Markdown, search, pinned threads, dictation, and a SwiftUI interface built for touch.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="section-inner prose">
-        <h2>How it works</h2>
-        <ol class="steps">
-          <li><strong>Download</strong> OpenChat from the App Store.</li>
-          <li><strong>Add a provider</strong> — paste an API key from any supported service.</li>
-          <li><strong>Chat</strong> with the model of your choice, switch anytime.</li>
-        </ol>
-        <p>OpenChat Pro is an optional one-time purchase that lets you connect with your Hermes service and unlock unlimited providers across your devices. The core chat experience works with your first provider for free.</p>
+    <section class="section section-muted" id="hermes">
+      <div class="section-inner split">
+        <div class="split-copy">
+          <p class="eyebrow">Hermes</p>
+          <h2>Connect with the Hermes service on your Mac</h2>
+          <p>OpenChat Pro generates a one-line start command. Run it in Terminal, and your iPhone connects with your local Hermes tools, memory, and skills.</p>
+          <ul class="check-list">
+            <li>No always-on cloud dashboard</li>
+            <li>Command generated in the app</li>
+            <li>Your Mac stays the boundary for private tools</li>
+          </ul>
+        </div>
+        <div class="terminal" aria-label="Example Hermes start command">
+          <div class="terminal-bar"><span></span><span></span><span></span></div>
+          <code>hermes config set api_server.enabled true &amp;&amp; hermes gateway</code>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-inner footer-cta">
-        <h2>Questions?</h2>
-        <p>Read the <a href="privacy.html">privacy policy</a> or <a href="support.html">get support</a>.</p>
+    <section class="section" id="privacy">
+      <div class="section-inner privacy-panel">
+        <div class="section-head align-left">
+          <p class="eyebrow">Privacy</p>
+          <h2>The data model is simple: it stays with you</h2>
+        </div>
+        <div class="privacy-grid">
+          <div><strong>On device</strong><p>Conversations, settings, and provider configuration.</p></div>
+          <div><strong>Keychain</strong><p>API keys are stored securely and synced only through your iCloud Keychain.</p></div>
+          <div><strong>Direct requests</strong><p>Prompts travel from your device to your selected provider.</p></div>
+          <div><strong>No backend</strong><p>OpenChat does not operate a chat server or analytics pipeline.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="pro">
+      <div class="section-inner">
+        <div class="section-head">
+          <p class="eyebrow">OpenChat Pro</p>
+          <h2>One-time unlock. No subscription.</h2>
+          <p>Start free with your first provider. Upgrade when you want unlimited providers and Hermes.</p>
+        </div>
+        <div class="pro-card">
+          <div>
+            <h3>OpenChat Pro</h3>
+            <p>Unlimited providers, Hermes connection, and lifetime access across your devices.</p>
+          </div>
+          <div class="price"><span>$9.99</span>lifetime</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div>
+        <h2>Put every model in your pocket</h2>
+        <p>Free download for iPhone and iPad. Bring your key and start chatting.</p>
+        <a class="button button-primary" href="download.html">Download on the App Store</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-      <span>© 2026 OpenChat · openchat.zpad.app</span>
-      <span><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></span>
+      <a class="brand" href="/">
+        <img src="assets/icon.png" alt="" class="brand-icon">
+        <span>OpenChat</span>
+      </a>
+      <nav aria-label="Footer">
+        <a href="download.html">Download</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:openchat@zpad.app">openchat@zpad.app</a>
+      </nav>
+      <span>© 2026 OpenChat</span>
     </div>
   </footer>
 </body>
