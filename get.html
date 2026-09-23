@@ -15,29 +15,22 @@
       <img src="assets/icon.png" alt="OpenChat icon" class="get-icon">
       <h1><span class="spin"></span><span id="title">Taking you to the App Store…</span></h1>
       <p id="subtitle">OpenChat for iPhone and iPad should open momentarily.</p>
-      <noscript><p><a id="nslink" href="download.html">Click here if nothing happens</a></p></noscript>
+      <noscript><p><a id="nslink" href="https://apps.apple.com/us/app/openchat-pro/id6813100017">Click here if nothing happens</a></p></noscript>
       <p style="margin-top:22px;"><a href="download.html">Back to downloads</a></p>
-      <span class="soon-badge">Awaiting App Store availability</span>
     </div>
   </main>
 
   <script>
-    const APPSTORE_URL = "";
+    const APPSTORE_URL = "https://apps.apple.com/us/app/openchat-pro/id6813100017";
 
     (function () {
       const title = document.getElementById("title");
       const subtitle = document.getElementById("subtitle");
       const nslink = document.getElementById("nslink");
 
-      if (APPSTORE_URL) {
-        nslink.href = APPSTORE_URL;
-        setTimeout(() => window.location.href = APPSTORE_URL, 1200);
-        setTimeout(() => subtitle.innerHTML = 'Nothing happening? <a href="' + APPSTORE_URL + '">Retry</a>', 4000);
-      } else {
-        document.querySelector(".spin").style.display = "none";
-        title.textContent = "OpenChat is almost on the App Store.";
-        subtitle.innerHTML = 'The listing is in final preparation. Meanwhile, see what you\'ll get on the <a href="download.html">download page</a>.';
-      }
+      nslink.href = APPSTORE_URL;
+      setTimeout(() => window.location.href = APPSTORE_URL, 1200);
+      setTimeout(() => subtitle.innerHTML = 'Nothing happening? <a href="' + APPSTORE_URL + '">Retry</a>', 4000);
     })();
   </script>
 </body>
